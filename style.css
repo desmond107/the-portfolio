@@ -256,9 +256,9 @@ p{
     top: 0;
 }
     #hero{
-        background-image: url(img1.jpeg);
+        background-image: url(pic10.jpeg);
         background-size: cover;
-        background-position: top center;
+        background-position:unset;
         position: relative;
         z-index: 1;
     }
@@ -271,7 +271,7 @@ p{
         top: 0;
         height: 100%;
         width: 100%;
-        background-color: black;
+        background-color: white;
         opacity: 0.87;
         z-index: -1;
     }
@@ -286,30 +286,17 @@ p{
     
     
     #hero h1{
-        display: block;
+        display:block;
         width: fit-content;
-        font-size: 4rem;
+        font-size: 7rem;
         position: relative;
         color: transparent;
         animation: text_reveal 0.5s ease forwards;
         animation-delay: 1s;
     }
+    <!-- ni hapa-->
     
     
-    #hero h1:nth-child(1){
-        animation-delay: 1s;
-    }
-    
-    
-    #hero h1:nth-child(2){
-        animation-delay: 2s;
-    }
-    
-    
-    #hero h1:nth-child(3){
-        animation: text_reveal_name 0.5s ease forwards;
-        animation-delay: 3s;
-    }
     
     
     #hero h1 span{
@@ -338,9 +325,9 @@ p{
         animation-delay: 2.5s;
     }
     
-    /* End Hero Section */
+   
     
-    /* About Section */
+    /* About ni hapa */
     
     #about .about{
         flex-direction: column-reverse;
@@ -395,7 +382,7 @@ p{
         top: 19px;
         height: 98%;
         width: 98%;
-        border: 7px solid crimson;
+        border: 7px solid white;
         z-index: -1;
     }
     
@@ -435,7 +422,7 @@ p{
         flex-direction: column;
         padding: 30px;
         border-radius: 10px;
-        background-image: url(./images/img-1.png);
+        background-image: url(pic8.jpeg);
         background-size: cover;
         margin: 10px 5%;
         position: relative;
@@ -483,6 +470,34 @@ p{
     
     #skills .skills-items:hover{
         transform: scale(1.1);
+    }
+    /*p*/
+    .portfolio .box-container{
+        display: flex;
+        align-items: center;
+        
+        justify-content: center;
+        flex-wrap: wrap;
+        padding:2rem 0;
+    }
+    
+    .portfolio .box-container .box{
+        height: 20rem;
+        width:26rem;
+        border-radius: 1rem;
+        margin:2rem;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    
+    .portfolio .box-container .box img{
+        height:100%;
+        width:100%;
+        object-fit: cover;
+    }
+    
+    .portfolio .box-container .box:hover img{
+        transform: scale(1.2);
     }
     
     
@@ -541,3 +556,277 @@ p{
         line-height: 2rem;
         font-weight: 500;
     }
+    /* Footer */
+
+#footer{
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+
+
+#footer .footer{
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+
+#footer h1{
+    margin-bottom: 40px;
+}
+
+
+#footer .social-icon{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+
+#footer .social-item{
+    height: 50px;
+    width: 50px;
+    margin: 0 5px;
+}
+
+
+#footer .social-item img{
+    filter: none;
+    transition: 0.3s ease all;
+}
+
+
+#footer .social-item:hover img{
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+
+#footer p{
+    color: white;
+    font-size: 1.3rem;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Keyframes inaanza */
+
+@keyframes hamburger_pulse{
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+
+
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+
+
+@keyframes text_reveal{
+    100%{
+        color: white;
+    }
+}
+
+
+@keyframes text_reveal_name{
+    100%{
+        color: white;
+    }
+}
+
+
+
+/* Media Query for Tablet */
+
+@media only screen and (min-width:768px){
+    .cta{
+        font-size: 2.5rem;
+        padding: 20px 60px;
+    }
+
+    h1.section-title{
+        font-size: 6rem;
+    }
+
+    /* Hero Section inaanza*/
+    #hero h1{
+        font-size: 7rem;
+    }
+    
+
+    /* About Section inaanza */
+
+    #about .about{
+        flex-direction: row;
+    }
+
+    #about .col-left{
+        width: 600px;
+        height: 400px;
+        padding-left: 60px;
+    }
+
+    #about .about .col-left .about-img::after{
+        left: -45px;
+        top: 34px;
+        height: 98%;
+        width: 98%;
+        border: 10px solid white;
+    }
+
+    #about .col-right{
+        text-align: left;
+        justify-content: left;
+        padding: 30px;
+    }
+
+    #about .col-right h1{
+        text-align: left;
+    }
+
+    #about .col-right p{
+        text-align: left;
+        padding: 0;
+    }
+
+    
+
+    /* Skills Section */
+    #skills .skills-bottom .skills-items{
+        flex-basis: 45%;
+        margin: 2.5%;
+    }
+    
+    /* Project Section */
+    #projects .project-item{
+        flex-direction: row;
+    }
+
+    #projects .project-item:nth-child(even){
+        flex-direction: row-reverse;
+    }
+
+    #projects .project-item{
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    #projects .all-projects .project-info{
+        height: 100%;
+    }
+
+    #projects .all-projects .project-img{
+        height: 100%;
+    }
+    
+
+    /* Contact Section */
+    #contact .contact{
+        flex-direction: column;
+        padding: 50px 0;
+        align-items: center;
+        justify-content: center;
+        min-height: 20vh;
+    }
+
+    #contact .contact-items{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        margin: 0;
+    }
+
+    #contact .contact-item{
+        margin: 10px;
+        flex-direction: row;
+    }
+
+    #contact .contact-item .icon{
+        height: 100px;
+        width: 100px;
+    }
+
+    #contact .contact-item .icon img{
+        object-fit: contain;
+    }
+
+    #contact .contact-item .contact-info{
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    /* End Contact Section */
+}
+
+/* End Media Query for Tablet */
+
+/* Media Query for Desktop */
+
+@media only screen and (min-width:1200px){
+
+    /* Header */
+    #header .hamburger{
+        display: none;
+    }
+
+    #header .nav-list ul{
+        position: initial;
+        display: block;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+    }
+
+    #header .nav-list ul li{
+        display: inline-block;
+    }
+
+    #header .nav-list ul li a{
+        font-size: 1.8rem;
+    }
+
+    #header .nav-list ul a::after{
+        display: none;
+    }
+
+    /* End Header */
+
+    /* Skills Section */
+    #skills .skills-bottom .skills-items{
+        flex-basis: 22%;
+        margin: 1.5%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #skills .skills-bottom .skills-items p{
+        padding: 10px;
+    }
+
+    #skills .skills-top{
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    /* End Skills Section */
+
+}
+
+/* End Media Query for Desktop */
